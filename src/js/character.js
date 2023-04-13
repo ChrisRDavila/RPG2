@@ -1,4 +1,3 @@
-import 'src/css/styles.css';
 
 export class Character {
   constructor(characterClass, strength, intelligence, dexterity, maxHealth, currentHealth, level, experience, money) {
@@ -55,15 +54,34 @@ export class Battle {
     }
   }
 }
+
 export class Gameplay {
-  constructor(stepAmount, map) {
-    this.stepAmount = step;
+  constructor(step, map) {
+    this.step = step;
     this.map = map;
   }
-//   newArea(){
-//     this.stepAmount += 1;
+}
+  // interaction(step) {
+  //   step++;
+  //   let roll = Math.floor(Math.random() * 3) + 1;
+  //   switch (roll) {
+  //     case 1:
+  //       return new LevelUpPotion();
+  //     case 2:
+  //       return new ArmorTreasureChest();
+  //     case 3:
+  //       return new Monster("Orc", 10, 5, 50, 50, 20, 10);
+  //     default:
+  //       return null;
+  //   }
+  // }
 
-//   }
+
+  // newArea(){
+  //   this.stepAmount += 1;
+
+
+  // }
 // } 
 
 

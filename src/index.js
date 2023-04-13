@@ -1,7 +1,7 @@
 import 'bootstrap';
 import 'bootstrap/dist/css/bootstrap.min.css';
-import './css/styles.css';
-import { Character, Battle } from '../src/js/character.js';
+import 'src/css/styles.css';
+import { Character, Monster, Battle, Gameplay } from '../src/js/character.js';
 
 // User interface logic
 
