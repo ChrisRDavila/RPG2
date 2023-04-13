@@ -1,4 +1,4 @@
-import { Character, Monster, Battle } from '../src/js/character.js';
+import { Character, Monster, Battle, Gameplay } from '../src/js/character.js';
 
 describe ('Character', () => {
   let character;
@@ -88,16 +88,44 @@ describe ('Battle', () => {
 
 describe ('Gameplay', () => {
   let game;
+
   beforeEach(() => {
     const step = 0;
     const map = ["start", "", "monster", "blank", "treasure", "", "monster", "end"];
+    // const interaction = {LevelUpPotion, ArmorTreasureChest, Monster};
     game = new Gameplay(step, map);
+  });
 
-    test('should start a new gameplay with step value of one and assign array positions for gameplay events');
+    test('should start a new gameplay with step value of one and assign array positions for gameplay events', () => {
     expect(game.step).toEqual(0);
-    expect(game.map).toEqual("start", "", "monster", "blank", "treasure", "", "monster", "end");
-  })
-})
+    expect(game.map).toEqual(["start", "", "monster", "blank", "treasure", "", "monster", "end"]);
+
+  //   test("change in step postion should trigger dice roll that chooses randomized interaction");
+  //   interaction
+  //   expect(roll).toBeInstanceOf(LevelUpPotion);
+  //   expect(roll).toBeInstanceOf(ArmorTreasureChest);
+  //   expect(roll).toBeInstanceOf(Monster);
+  
+  });
+});
+
+
+
+// interaction(step) {
+//   step++;
+//   let roll = Math.floor(Math.random() * 3) + 1;
+//   switch (roll) {
+//     case 1:
+//       return new LevelUpPotion();
+//     case 2:
+//       return new ArmorTreasureChest();
+//     case 3:
+//       return new Monster("Orc", 10, 5, 50, 50, 20, 10);
+//     default:
+//       return null;
+//   }
+// }
+// }
 
 
   
