@@ -92,21 +92,24 @@ describe ('Gameplay', () => {
   beforeEach(() => {
     const step = 0;
     const map = ["start", "", "monster", "blank", "treasure", "", "monster", "end"];
-    // const interaction = {LevelUpPotion, ArmorTreasureChest, Monster};
-    game = new Gameplay(step, map);
+    const items = ("LevelUpPotion", "ArmorTreasureChest", "Monster");
+    game = new Gameplay(step, map)
+    Gameplay.interaction();
   });
 
     test('should start a new gameplay with step value of one and assign array positions for gameplay events', () => {
     expect(game.step).toEqual(0);
     expect(game.map).toEqual(["start", "", "monster", "blank", "treasure", "", "monster", "end"]);
 
-  //   test("change in step postion should trigger dice roll that chooses randomized interaction");
-  //   interaction
-  //   expect(roll).toBeInstanceOf(LevelUpPotion);
-  //   expect(roll).toBeInstanceOf(ArmorTreasureChest);
-  //   expect(roll).toBeInstanceOf(Monster);
+    test("change in step postion should trigger dice roll that chooses randomized interaction");
+    expect(Gameplay.interaction()).toBeInstanceOf(LevelUpPotion);
+    expect(roll).toBeInstanceOf(ArmorTreasureChest)
+    expect(roll).toBeInstanceOf(Monster);
+  
   
   });
+
+
 });
 
 

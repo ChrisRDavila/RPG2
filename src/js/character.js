@@ -60,22 +60,22 @@ export class Gameplay {
     this.step = step;
     this.map = map;
   }
-}
-  // interaction(step) {
-  //   step++;
-  //   let roll = Math.floor(Math.random() * 3) + 1;
-  //   switch (roll) {
-  //     case 1:
-  //       return new LevelUpPotion();
-  //     case 2:
-  //       return new ArmorTreasureChest();
-  //     case 3:
-  //       return new Monster("Orc", 10, 5, 50, 50, 20, 10);
-  //     default:
-  //       return null;
-  //   }
-  // }
 
+  interaction(step) {
+    step++
+    let roll = Math.floor(Math.random() * 3) + 1;
+    switch (roll) {
+      case 1:
+        return new LevelUpPotion();
+      case 2:
+        return new ArmorTreasureChest();
+      case 3:
+        return new Monster("Orc", 10, 5, 50, 50, 20, 10);
+      default:
+        return null;
+    }
+  }
+}
 
   // newArea(){
   //   this.stepAmount += 1;
