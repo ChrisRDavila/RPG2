@@ -14,7 +14,7 @@
 
 ## Description
 
-_{This is a detailed description of your application. Give as much detail as needed to explain what the application does as well as any other information you want users or other developers to have.}_
+_create an RGP character with input selecton for various properties. OOP, TDD_
 
 ## Setup/Installation Requirements
 
